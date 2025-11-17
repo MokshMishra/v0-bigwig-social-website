@@ -1,5 +1,7 @@
 'use client'
 
+import Link from 'next/link'
+
 export default function AboutSection() {
   return (
     <section id="about" className="py-20 md:py-32 bg-gradient-to-b from-transparent to-[var(--color-primary)]/30">
@@ -54,6 +56,12 @@ export default function AboutSection() {
                 <span className="text-sm font-semibold text-[var(--color-accent)]">💡 Innovative</span>
               </div>
             </div>
+
+            <Link href="/our-story">
+              <button className="mt-4 px-8 py-3 bg-gradient-to-r from-[var(--color-accent)] to-orange-500 text-white font-semibold rounded-lg hover:shadow-lg hover:scale-105 transition-all duration-300 transform">
+                Read More About Our Story
+              </button>
+            </Link>
           </div>
         </div>
       </div>
