@@ -1,9 +1,10 @@
 'use client'
 
 import { useState } from 'react'
+import Link from 'next/link'
 
 export default function PortfolioSection() {
-  const [activeFilter, setActiveFilter] = useState('ALL')
+  const [activeFilter, setActiveFilter] = useState('ALL WORKS')
 
   const filters = ['ALL WORKS', 'EDUCATION', 'FMCG', 'REAL ESTATE', 'FINANCE', 'HOSPITALITY']
 
@@ -14,6 +15,7 @@ export default function PortfolioSection() {
       client: 'Gyan Ganga',
       title: 'Student Enrollment Campaign',
       image: '🎓',
+      sector: 'education',
     },
     {
       id: 2,
@@ -21,6 +23,7 @@ export default function PortfolioSection() {
       client: 'The New Shop',
       title: 'Product Launch Strategy',
       image: '🛍️',
+      sector: 'fmcg',
     },
     {
       id: 3,
@@ -28,6 +31,7 @@ export default function PortfolioSection() {
       client: 'Gun for Glory',
       title: 'Brand Awareness Drive',
       image: '💰',
+      sector: 'finance',
     },
     {
       id: 4,
@@ -35,6 +39,7 @@ export default function PortfolioSection() {
       client: 'Property Pro',
       title: 'Digital Real Estate Solution',
       image: '🏢',
+      sector: 'realEstate',
     },
     {
       id: 5,
@@ -42,6 +47,7 @@ export default function PortfolioSection() {
       client: 'Resort Paradise',
       title: 'Tourism Marketing',
       image: '🏨',
+      sector: 'hospitality',
     },
     {
       id: 6,
@@ -49,6 +55,7 @@ export default function PortfolioSection() {
       client: 'Tech Institute',
       title: 'Online Course Promotion',
       image: '💻',
+      sector: 'education',
     },
   ]
 
@@ -85,8 +92,9 @@ export default function PortfolioSection() {
         {/* Portfolio Grid */}
         <div className="grid md:grid-cols-3 gap-8">
           {filteredWorks.map((work, idx) => (
-            <div
+            <Link
               key={work.id}
+              href={`/portfolio/${work.sector}`}
               className="group relative bg-white/70 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/40 hover:border-[var(--color-accent)]/50 transition-all duration-300 hover:shadow-2xl cursor-pointer animate-fade-in-scale"
               style={{ animationDelay: `${idx * 50}ms` }}
             >
@@ -113,7 +121,7 @@ export default function PortfolioSection() {
                   View Case Study →
                 </button>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>
