@@ -333,6 +333,53 @@ export const portfolioSectors = {
       },
     ],
   },
+
+  sports: {
+    id: 'sports',
+    icon: '🏅',
+    title: 'Winning Digital Strategies for Sports & Academies',
+    tagline: 'From Training Ground to Global Podium',
+    heading: 'Where Discipline Meets Digital Excellence',
+    description: 'The sports industry thrives on community and participation. We deliver high-engagement digital marketing solutions that focus on driving registrations, promoting events (e.g., shooting tournaments, summer camps), and building strong, localized brand loyalty for academies and stadiums. We transform passion into measurable success.',
+    proposition: 'We transform passion into measurable success by building athlete communities and driving participation through high-energy digital campaigns.',
+    strategySteps: [
+      { number: 1, title: 'Research', description: 'Analyze competitor academies, sports events, and target demographics (parents/athletes).' },
+      { number: 2, title: 'Strategize', description: 'Plan campaigns focused on seasonal enrollments and event ticket sales via geo-targeted SMM & PPC.' },
+      { number: 3, title: 'Develop', description: 'Create high-impact content: athlete profiles, event highlight reels, and training videos (optimizing for mobile viewing).' },
+      { number: 4, title: 'Implement', description: 'Run lead generation campaigns for enrollments and manage real-time social media coverage for live events.' },
+      { number: 5, title: 'Evaluate & Optimize', description: 'Track registrations, measure attendance boosts, and adjust campaigns for maximum ROI on participation.' },
+    ],
+    clients: [
+      {
+        name: 'Gun For Glory Shooting Academy',
+        service: 'Association Announcement & Tournament Promotion',
+        result: 'Successful promotion of Doon International collaboration and shooting tournaments.',
+        image: '/portfolio/sports/gun-for-glory.jpg?query=shooting-academy-tournament-athlete',
+        metrics: ['+40% Enrollment Increase', '5 Days Sell-Out Rate', 'Top State Rank Visibility'],
+      },
+      {
+        name: 'Rangbhoomi Stadium / Summer Camp',
+        service: 'Building Community & Promoting Summer Camps',
+        result: 'Successful summer camp promotion and facility engagement campaigns.',
+        image: '/portfolio/sports/rangbhoomi.jpg?query=sports-stadium-summer-camp-kids',
+        metrics: ['+60% Social Media Reach', '150+ Leads Generated', 'Full Camp Capacity'],
+      },
+    ],
+    campaigns: [
+      {
+        name: 'Event Promotion & Buzz',
+        description: 'Pre-event countdowns, behind-the-scenes content, and ticket sales pushes using scarcity/FOMO tactics.',
+        image: '/portfolio/sports/event-buzz.jpg?query=sports-event-excitement-stadium',
+        highlights: ['Pre-event countdowns', 'Behind-the-scenes content', 'Ticket sales push', 'FOMO marketing'],
+      },
+      {
+        name: 'Enrollment & Community Building',
+        description: 'Athlete testimonial videos, coach spotlights, and targeted paid ads to drive monthly/seasonal registrations.',
+        image: '/portfolio/sports/community-building.jpg?query=sports-team-training-community',
+        highlights: ['Athlete testimonials', 'Coach spotlights', 'Targeted paid ads', 'Seasonal registrations'],
+      },
+    ],
+  },
 }
 
 export type SectorKey = keyof typeof portfolioSectors

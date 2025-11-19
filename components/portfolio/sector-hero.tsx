@@ -17,7 +17,17 @@ export default function SectorHero({ sector }: SectorHeroProps) {
 
       <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
         <div className="mb-6 inline-block">
-          <span className="text-6xl">{sector.icon}</span>
+          {/* Added custom SVG for sports sector */}
+          {sector.id === 'sports' ? (
+            <div className="w-24 h-24 md:w-32 md:h-32 mx-auto text-[var(--color-accent)] animate-float">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-full h-full">
+                <circle cx="12" cy="8" r="7" />
+                <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88" />
+              </svg>
+            </div>
+          ) : (
+            <span className="text-6xl">{sector.icon}</span>
+          )}
         </div>
 
         <h1 className="text-5xl md:text-6xl font-bold text-[var(--color-text-primary)] mb-4 text-balance">
